@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/27 13:47:14 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/01 18:16:03 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 16:00:46 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ static int	ft_undefined_copy(char *f, int tmp, int i, int j)
 	ret = 0;
 	tmp2 = tmp;
 	arg = (char*)malloc(sizeof(char) * i - tmp2 + 1);
-	while (tmp2 < i)
+	while (tmp2 <= i)
 		arg[j++] = f[tmp2++];
 	ft_reset();
 	ft_precision(arg);
-/*	if (g_minfd != 0 || g_p != 0)
-		ret = ft_precision_undefined(arg);*/
+	if (g_minfd != 0 || g_p != 0)
+		ret = ft_precision_undefined(tmp, ret, f);
 	if (g_minfd == 0 && g_p == 0)
 	{
 		tmp2 = 0;
@@ -93,7 +93,7 @@ static int	ft_undefined_percent(char *f, int tmp, int i)
 		arg[j++] = f[tmp++];
 	ft_reset();
 	ft_precision(arg);
-//	ret = ft_print_perc('%');
+	ret = ft_print_percent('%');
 	ret = 1;
 	free(arg);
 	return (ret);

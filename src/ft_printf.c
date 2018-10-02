@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 16:05:30 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/02 12:11:40 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 14:18:24 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,15 @@ static int		ft_printf_suite(va_list ap, char *format, int ret, int *i)
 	tmp = ft_check_arg((char*)format, (*i) + 1, &arg, &j);
 	if (tmp == -1)
 	{
-		tmp = ft_strlen(arg);
-		if (tmp == 1)
+		if (ft_strlen(arg) == 1)
 			ret += ft_letter(ap, format[(*i) + 1], '0');
 		else
 		{
 			ft_precision(arg);
 			flag = ft_check_flag(arg);
-			ret += ft_letter(ap, format[(*i) + tmp], flag);
+			ret += ft_letter(ap, format[(*i) + ft_strlen(arg)], flag);
 		}
-		(*i) += tmp;
+		(*i) += ft_strlen(arg);
 		free(arg);
 		return (ret);
 	}

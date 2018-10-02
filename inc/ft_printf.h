@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/19 13:25:41 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/02 12:09:21 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 13:07:54 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int		ft_print_hexa(va_list ap, char c, char flag);
 int		ft_print_unsigned(va_list ap, char c, char flag);
 int		ft_print_p(va_list ap);
 int		ft_print_str(va_list ap, char c);
+int		ft_print_percent(char c);
 
 int		ft_precision_nbr(char *nbr, int ret);
 int		ft_precision_char(int ret, char c);
@@ -49,6 +50,7 @@ int		ft_precision_hexa(char *nbr, int ret, char *h);
 int		ft_precision_unsigned(char *nbr, int ret);
 int		ft_precision_p(int ret, char *nbr);
 int		ft_precision_str(int ret, char *str);
+int		ft_precision_undefined(int tmp, int count, char *f);
 
 int		ft_atoi(char *str);
 size_t	ft_strlen(const char *str);

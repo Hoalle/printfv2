@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/02 11:35:37 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/02 11:56:12 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 13:59:49 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int		ft_print_p(va_list ap)
 		ft_putstr(nbr);
 		ret = 2 + ft_strlen(nbr);
 	}
+	free(nbr);
 	return (ret);
 }

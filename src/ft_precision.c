@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 17:06:57 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/01 18:16:18 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 16:10:00 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void			ft_precision(char *arg)
 
 	i = 0;
 	j = 0;
+	ft_reset();
 	while (arg[i])
 	{
 		if (arg[i] == '.')
@@ -99,4 +100,6 @@ void			ft_precision(char *arg)
 		ft_precision_part1(arg, i, j);
 	else
 		ft_precision_part2(arg, i, j);
+//	if (g_prec == '.' && g_zero == '0')
+//		g_zero = '\0';
 }

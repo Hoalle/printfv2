@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 16:47:12 by cperrard          #+#    #+#             */
-/*   Updated: 2018/09/26 17:00:52 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 12:53:02 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char		ft_check_flag(char *arg)
 	i = 0;
 	while (arg[i])
 	{
-		if (arg[i] == 'h' && arg[i] == 'h')
+		if (arg[i] == 'h' && arg[i + 1] == 'h')
 			return ('H');
 		else if (arg[i] == 'h' && arg[i + 1] != 'h')
 			return ('h');

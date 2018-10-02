@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 16:05:30 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/01 18:22:22 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 12:11:40 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ static	int		ft_letter(va_list ap, char c, char flag)
 		return (ft_print_char(ap, c));
 	else if (c == 'd' || c == 'D' || c == 'i')
 		return (ft_print_nbr(ap, c, flag));
-//	else if (c == 's' || c == 'S')
-//		return (ft_print_str(ap, c, flag, arg));
+	else if (c == 's' || c == 'S')
+		return (ft_print_str(ap, c));
 	else if (c == 'o' || c == 'O')
 		return (ft_print_octal(ap, c, flag));
 	else if (c == 'x' || c == 'X')
 		return (ft_print_hexa(ap, c, flag));
 	else if (c == 'u' || c == 'U')
 		return (ft_print_unsigned(ap, c, flag));
-/*	else if (c == 'p')
-		return (ft_print_p(ap, c, flag, arg));*/
+	else if (c == 'p')
+		return (ft_print_p(ap));
 	return (0);
 }
 

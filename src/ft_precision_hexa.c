@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 17:14:21 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/01 18:25:57 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 11:55:33 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int		ft_precision_h_part1_1(char *h, char *nbr, int len, int hash)
 	if (g_p > g_minfd)
 	{
 		if (g_minfd > len)
-			tmp = g_p - g_minfd;
+			tmp = g_p - g_minfd - hash;
 		else
 			tmp = g_p - len - hash;
 		while (tmp--)

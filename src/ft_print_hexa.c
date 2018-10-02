@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 16:50:53 by cperrard          #+#    #+#             */
-/*   Updated: 2018/10/01 18:19:13 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/10/02 11:53:52 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,12 @@ int				ft_print_hexa(va_list ap, char c, char flag)
 	char	*nbr;
 	char	*h;
 
-	h = (char*)malloc(sizeof(char) * 2);
 	if (g_hash == '#')
 	{
 		if (c == 'X')
-			h = "0X";
+			h = ft_strdup("0X");
 		else
-			h = "0x";
+			h = ft_strdup("0x");
 	}
 	nbr = NULL;
 	ret = 0;
@@ -94,6 +93,7 @@ int				ft_print_hexa(va_list ap, char c, char flag)
 	else
 		ret = ft_print(nbr, ret, c);
 	free(nbr);
-	free(h);
+	if (g_hash == '#')
+		free(h);
 	return (ret);
 }
